@@ -1,16 +1,16 @@
 {
   "name": "EvenOddTime",
-  "version": "0.0.1a",
-  "description": "Piwik Platform showcase: how to create widgets, menus, scheduled tasks, a custom archiver, plugin tests, and a AngularJS component.",
+  "version": "0.0.1",
+  "description": "Shows even and odd hours statistics on report.",
   "theme": false,
   "require": {
-    "piwik": ">=2.14.0-b2"
+    "piwik": ">=2.13.1"
   },
   "authors": [
     {
-      "name": "Piwik",
-      "email": "",
-      "homepage": ""
+      "name": "Konrad Pawlikowski",
+      "email": "k.pawlikowski@piwik.pro",
+      "homepage": "http://piwik.pro"
     }
   ]
 }
