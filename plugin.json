@@ -1,6 +1,6 @@
 {
   "name": "EvenOddTime",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Shows even and odd hours statistics on report.",
   "theme": false,
   "require": {

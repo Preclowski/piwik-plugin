@@ -2,18 +2,18 @@
 
 ## Description
 
-Add your plugin description here.
+This plugin will generate report divided for odd and even hours of visits.
 
 ## FAQ
 
-__My question?__
+__Is it really usefull?__
 
-My answer
+Problably no.
 
 ## Changelog
 
-Here goes the changelog text.
+0.1.0 - first version
 
 ## Support
 
-Please direct any feedback to ...
+Please direct any feedback to k.pawlikowski@piwik.pro

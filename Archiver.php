@@ -23,7 +23,7 @@ class Archiver extends \Piwik\Plugin\Archiver
     {
         $archiveProcessor = $this->getProcessor();
         $logAggregator = $this->getLogAggregator();
-        $query = $logAggregator->queryVisitsByDimension(array('MOD(HOUR(log_visit.visitor_localtime), 2)'));
+        $query = $logAggregator->queryVisitsByDimension(array('MOD(HOUR(log_visit.visit_last_action_time), 2)'));
 
         if (!$query) {
             return;
@@ -46,11 +46,11 @@ class Archiver extends \Piwik\Plugin\Archiver
         $dt->addRowsFromSimpleArray(array(
             array(
                 'label' => Piwik::translate('Even'),
-                'nb_visits' => $data[0][Metrics::INDEX_NB_VISITS]
+                'nb_visits' => isset($data[0]) ? $data[0][Metrics::INDEX_NB_VISITS] : 0
             ),
             array(
                 'label' => Piwik::translate('Odd'),
-                'nb_visits' => $data[1][Metrics::INDEX_NB_VISITS]
+                'nb_visits' => isset($data[1]) ? $data[1][Metrics::INDEX_NB_VISITS] : 0
             )
         ));
 

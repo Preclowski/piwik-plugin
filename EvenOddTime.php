@@ -27,14 +27,11 @@ class EvenOddTime extends \Piwik\Plugin
      */
     public function configureViewDataTable(ViewDataTable $view)
     {
-        switch ($view->requestConfig->apiMethodToRequestDataTable) {
-            case 'EvenOddTime.getEvenOddReport':
-                $view->config->show_limit_control = true;
-                $view->config->show_search = false;
-                $view->config->show_goals = false;
-                $view->config->columns_to_display = array('label', 'nb_visits');
-
-                break;
+        if ('EvenOddTime.getEvenOddReport' === $view->requestConfig->apiMethodToRequestDataTable) {
+            $view->config->show_limit_control = true;
+            $view->config->show_search = false;
+            $view->config->show_goals = false;
+            $view->config->columns_to_display = array('label', 'nb_visits');
         }
     }
 }
